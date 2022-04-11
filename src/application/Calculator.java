@@ -20,7 +20,7 @@ public class Calculator {
 		JButton button7 = new JButton("7");
 		JButton button8 = new JButton("8");
 		JButton button9 = new JButton("9"); 
-		
+		JButton button = new JButton("0");
 		
 		
 		button1.setBounds(10, 260 , 50, 50);
@@ -32,10 +32,10 @@ public class Calculator {
 		button7.setBounds(10, 140, 50, 50);
 		button8.setBounds(70, 140, 50, 50);
 		button9.setBounds(130, 140, 50, 50);
+		button.setBounds(70, 320, 50, 50);
 		
 		
-		
-		
+		jf.add(button);
 		jf.add(button1);
 		jf.add(button2);
 		jf.add(button3);
@@ -47,7 +47,7 @@ public class Calculator {
 		jf.add(button9);
 		
 	
-		jf.setSize(400, 400);
+		jf.setSize(400, 420);
 		
 		jf.setLayout(null);
 		jf.setLocationRelativeTo(null);	
