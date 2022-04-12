@@ -6,9 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.event.AncestorEvent;
-import javax.swing.event.AncestorListener;
+
 
 public class Calculator {
 	
@@ -19,8 +17,6 @@ public class Calculator {
 		JTextArea ta = new JTextArea();
 		
 		ta.setBounds(10, 10, 230, 115);
-		
-		
 		
 		JButton button1 = new JButton("1");
 		JButton button2 = new JButton("2");
@@ -57,18 +53,7 @@ public class Calculator {
 		subrtacao.setBounds(190, 260, 50, 50);
 		soma.setBounds(190, 320, 50, 50);
 		igual.setBounds(130, 320, 50, 50);
-		
-		
-		
-		
-		
-		
-	
 			
-		
-	
-		
-		
 		jf.add(button);
 		jf.add(button1);
 		jf.add(button2);
@@ -87,6 +72,56 @@ public class Calculator {
 		jf.add(igual);
 		jf.add(ta);
 		
+		button1.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				ta.append("1");
+			
+			}
+		});
+		
+		button2.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				ta.append("2");
+				
+			}
+		});
+		
+		soma.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				ta.append("+");
+				
+					
+				}
+		});
+		
+		
+		igual.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				if ((e.getSource() == igual)) {
+					int a = Integer.parseInt(ta.getText().substring(0, ta.getText().indexOf("+")));
+					int b = Integer.parseInt(ta.getText().substring(ta.getText().indexOf("+")));
+					
+					String c = String.valueOf(a + b);
+					
+					ta.setText(c);
+				
+				}
+			}
+		});
+		
+		
 		jf.setSize(265, 420);
 		
 		jf.setLayout(null);
@@ -95,6 +130,4 @@ public class Calculator {
 		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		jf.setVisible(true);
 	}
-	
-	
 }
