@@ -1,8 +1,14 @@
 package application;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.event.AncestorEvent;
+import javax.swing.event.AncestorListener;
 
 public class Calculator {
 	
@@ -10,9 +16,10 @@ public class Calculator {
 		
 		JFrame jf = new JFrame("Calculator");
 		
-		JTextField tf = new JTextField();
+		JTextArea ta = new JTextArea();
 		
-		tf.setBounds(10, 10, 230, 115);
+		ta.setBounds(10, 10, 230, 115);
+		
 		
 		
 		JButton button1 = new JButton("1");
@@ -52,6 +59,16 @@ public class Calculator {
 		igual.setBounds(130, 320, 50, 50);
 		
 		
+		
+		
+		
+		
+	
+			
+		
+	
+		
+		
 		jf.add(button);
 		jf.add(button1);
 		jf.add(button2);
@@ -68,7 +85,7 @@ public class Calculator {
 		jf.add(subrtacao);
 		jf.add(soma);
 		jf.add(igual);
-		jf.add(tf);
+		jf.add(ta);
 		
 		jf.setSize(265, 420);
 		
@@ -78,4 +95,6 @@ public class Calculator {
 		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		jf.setVisible(true);
 	}
+	
+	
 }
